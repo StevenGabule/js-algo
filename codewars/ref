@@ -1,0 +1,6 @@
+// console.log(solution('abcdef'))
+// console.log('abc'.split(''))
+
+// console.log(2 % 2 === 0)
+// const str = 'abc';
+// console.log(str.match(/.{1,2}/g))
