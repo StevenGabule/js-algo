@@ -104,7 +104,9 @@ console.log(Helpers.calcCircumference(8));
 abstract class Project {
     projectName: string = "Default";
     budget: number = 1000;
-    abstract changeName(name: string) : void;
+
+    abstract changeName(name: string): void;
+
     calcBudget() {
         return this.budget * 2;
     }
@@ -120,3 +122,21 @@ let newProject = new ITProject();
 console.log(newProject);
 newProject.changeName("Super IT Project");
 console.log(newProject);
+
+/* private constructors */
+class OnlyOne {
+    private static instance: OnlyOne;
+
+    private constructor(public name: string) {
+    }
+
+    static getInstance() {
+        if (!OnlyOne.instance) {
+            OnlyOne.instance = new OnlyOne('The only one');
+        }
+        return OnlyOne.instance;
+    }
+}
+
+// let wrong = new OnlyOne("the only one"); // which is the wrong way
+let right  = OnlyOne.getInstance();
