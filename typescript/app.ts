@@ -28,14 +28,26 @@ console.log(username, age);
 class Person {
     name: string;
     private type: string;
-    protected age: number;
+    protected age: number = 26;
 
     constructor(name:string, public username: string) {
         this.name = name;
     }
+
+    printAge() {
+        console.log(this.age)
+        this.setType('old guy!');
+    }
+
+    private setType(type: string) {
+        this.type = type;
+        console.log(this.type);
+    }
+
 }
 
 const person = new Person('JOHN', 'john');
 console.log(person.name, person.username);
+person.printAge();
 
 
