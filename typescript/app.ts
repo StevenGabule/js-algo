@@ -19,7 +19,7 @@ const [hb1, hb2] = myHobbies;
 console.log(hb1, hb2);
 
 // objects
-const userData = { username: "John", age: 27};
+const userData = {username: "John", age: 27};
 const {username, age} = userData;
 console.log(username, age);
 
@@ -30,7 +30,7 @@ class Person {
     private type: string;
     protected age: number = 26;
 
-    constructor(name:string, public username: string) {
+    constructor(name: string, public username: string) {
         this.name = name;
     }
 
@@ -87,3 +87,15 @@ console.log(plant.species);
 plant.species = "Green Plant";
 console.log(plant.species);
 
+
+/* static properties and methods */
+class Helpers {
+    static PI: number = 3.14;
+
+    static calcCircumference(diameter: number): number {
+        return this.PI * diameter;
+    }
+}
+
+console.log(2 * Helpers.PI);
+console.log(Helpers.calcCircumference(8));
