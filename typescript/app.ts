@@ -51,3 +51,12 @@ console.log(person.name, person.username);
 person.printAge();
 
 
+/* INHERITANCE */
+class John extends Person {
+    constructor(username: string) {
+        super("max", username);
+        this.age = 31;
+    }
+}
+
+const john = new John("john");
