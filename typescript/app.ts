@@ -62,7 +62,7 @@ class John extends Person {
 const john = new John("john");
 
 /* GETTERS AND SETTERS */
-class Plant {
+class Plants {
     private _species: string = "Default";
 
     get species() {
@@ -78,7 +78,8 @@ class Plant {
     }
 }
 
-let plant = new Plant();
+// @ts-ignore
+let plant = new Plants();
 console.log(plant.species);
 
 plant.species = "AB";
