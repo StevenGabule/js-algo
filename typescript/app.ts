@@ -25,6 +25,7 @@ console.log(username, age);
 
 
 /* CREATING A CLASSES AND CLASS PROPERTIES*/
+// @ts-ignore
 class Person {
     name: string;
     private type: string;
@@ -46,6 +47,7 @@ class Person {
 
 }
 
+// @ts-ignore
 const person = new Person('JOHN', 'john');
 console.log(person.name, person.username);
 person.printAge();
