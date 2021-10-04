@@ -23,7 +23,6 @@ function factorial(number) {
 * @param {string[]} letters
 * @return {string}
 * */
-
 function pairs(letters) {
     const result = [];
     for (let i = 0; i < letters.length; i+=1) {
@@ -44,8 +43,11 @@ function multiplyArrayInPlace(array, multiplier) {
 
 function multiplyArray(array, multiplier) {
     const multipliedArray = [...array];
+    console.log(multipliedArray)
     for (let i = 0; i < multipliedArray.length; i += 1) {
-        multipliedArray[i] *= multiplier
+        for (let j = 0; j < multipliedArray.length; j += 1) {
+            multipliedArray[j][i] *= multiplier
+        }
     }
     return multipliedArray;
 }
@@ -55,4 +57,4 @@ console.log(iterativePower(3, 2))
 console.log(factorial(5))
 console.log(pairs(['a', 'b']))
 console.log(multiplyArrayInPlace([1,2,3], 2))
-console.log(multiplyArray([1,2,3], 2))
+console.log(multiplyArray([[1,3,5],[2,4,6],[3,6,8]], 2))

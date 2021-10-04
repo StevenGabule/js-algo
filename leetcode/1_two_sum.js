@@ -1,5 +1,4 @@
 /* O(n^2) time | O(1) space */
-
 /*function twoNumberSum(array, targetSum) {
     let i = 0;
     let j = 0;

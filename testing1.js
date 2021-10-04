@@ -161,4 +161,60 @@ const ratings = watchList.map(watch => {
 
 // Only change code above this line
 
-console.log(JSON.stringify(ratings));
+// console.log(JSON.stringify(ratings));
+
+function diffArray(arr1, arr2) {
+    /*var newArr = [];
+    for (let i = 0; i < arr1.length; i++) {
+        if (!arr2.includes(arr1[i])) {
+            newArr.push(arr1[i]);
+        }
+    }
+    for (let i = 0; i < arr2.length; i++) {
+        if (!arr1.includes(arr2[i])) {
+            newArr.push(arr2[i]);
+        }
+    }
+    return newArr;*/
+    /*return [...diff(arr1, arr2), ...diff(arr2, arr1)];
+
+    function diff(a, b) {
+        return a.filter(item => b.indexOf(item) === -1);
+    }*/
+    return arr1
+        .concat(arr2)
+        .filter(item => !arr1.includes(item) || !arr2.includes(item));
+}
+
+// console.log(diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]));
+
+function destroyer(arr, ...args) {
+    return arr
+        .concat(args)
+        .filter(item => !arr.includes(item) || !args.includes(item));
+}
+
+// console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3))
+
+
+function whatIsInAName(collection, source) {
+    let src_keys = Object.keys(source);
+
+    // filter the collection
+    return collection.filter(function(obj) {
+        return src_keys
+            .map((key)  =>  obj.hasOwnProperty(key) && obj[key] === source[key])
+            .reduce((a, b)  => a && b);
+    });
+}
+
+// console.log(whatIsInAName([{first: "Romeo", last: "Montague"}, {first: "Mercutio", last: null}, {
+//     first: "Tybalt",
+//     last: "Capulet"
+// }], {last: "Capulet"}));
+
+// whatIsInAName([{ "apple": 1 }, { "apple": 1 }, { "apple": 1, "bat": 2 }], { "apple": 1 })
+// console.log(whatIsInAName([{ "apple": 1, "bat": 2 }, { "bat": 2 }, { "apple": 1, "bat": 2, "cookie": 2 }], { "apple": 1, "bat": 2 }))
+const name = "john paul".split(" ");
+console.log(...name);
+console.log(name.length > 1 ? name[name.length - 1] : '');

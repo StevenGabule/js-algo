@@ -28,14 +28,12 @@ function toCamelCase(str) {
     return arr.join('');
 
 }*/
-
 /*
 function toCamelCase(str){
     //console.log(str, 'testing')
     if(str === ''){
         return ''
     } else {
-
         let containmentArea = []
         let splitString = str.replace(/[^A-Z0-9]/ig, "_").split("_")
         //[ 'the', 'stealth', 'warrior' ]
@@ -45,7 +43,6 @@ function toCamelCase(str){
             let capitalLetter = splitWords[0].toUpperCase()
             splitWords.splice(0,1, capitalLetter)
             let joinedWord = splitWords.join('')
-
             containmentArea.push(joinedWord)
             let newSentence = containmentArea.join('')
 
@@ -54,13 +51,13 @@ function toCamelCase(str){
     }
 }*/
 /*
-
 function toCamelCase(str) {
     return str.replace(/[-_]\w/ig, match => match.charAt(1).toUpperCase());
 }
 */
 
-const toCamelCase = (str) => str.split(/[-_]/g).map((w, i) => (i > 0 ? w.charAt(0).toUpperCase() : w.charAt(0)) + w.slice(1)).join('');
+const toCamelCase = (str) => str.split(/[-_]/g)
+  .map((w, i) => (i > 0 ? w.charAt(0).toUpperCase() : w.charAt(0)) + w.slice(1)).join('');
 
 console.log(toCamelCase("")); // return empty
 console.log(toCamelCase("The_Stealth_Warrior")); // TheStealthWarrior
