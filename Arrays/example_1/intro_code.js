@@ -3,12 +3,12 @@
   [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ]
 console.log([1,2,3,4,5].map(num => num * 10))*/
-
-const persons = [
-  {name: "John paul", age: 28, school: "ACLC", salary: 20000, history: [24000, 25500, 10000]},
-  {name: "John doe", age: 10, school: "CMU", salary: 28000, history: [25000, 25500, 10000]},
-  {name: "Jane doe", age: 31, school: "BUKSO", salary: 32000, history: [20000, 25500, 10000]},
-];
+//
+// const persons = [
+//   {name: "John paul", age: 28, school: "ACLC", salary: 20000, history: [24000, 25500, 10000]},
+//   {name: "John doe", age: 10, school: "CMU", salary: 28000, history: [25000, 25500, 10000]},
+//   {name: "Jane doe", age: 31, school: "BUKSO", salary: 32000, history: [20000, 25500, 10000]},
+// ];
 
 // calculate the history salary
 // persons.map(person => {
@@ -32,10 +32,10 @@ const persons = [
 // /*
 // * The Array.isArray() method determines whether the passed value is an Array.
 // * */
-Array.isArray([1, 2, 3]);  // true
-Array.isArray({foo: 123}); // false
-Array.isArray('foobar');   // false
-Array.isArray(undefined);  // false
+// Array.isArray([1, 2, 3]);  // true
+// Array.isArray({foo: 123}); // false
+// Array.isArray('foobar');   // false
+// Array.isArray(undefined);  // false
 // // console.log(Array.isArray({}))
 //
 // /*
@@ -73,3 +73,75 @@ Array.isArray(undefined);  // false
 //
 // const greaterthanValue =newArr.filter((val) => val >= 20)
 // console.log(greaterthanValue);
+
+// validate 3 numbers and display the greatest number
+// const nums1 = 1;
+// const nums2 = 13;
+// const nums3 = 18;
+// let greatestNum;
+//
+// if(nums1 > nums2 && nums1 > nums3) {
+//     greatestNum = nums1;
+// } else if(nums2 > nums1 && nums2 > nums3){
+//     greatestNum = nums2;
+// } else {
+//   greatestNum = nums3;
+// }
+// console.log(greatestNum)
+// var array = [20 , 60, 30];
+// var largest= 0;
+//
+// for (i=0; i<=largest;i++){
+//   if (array[i]>largest) {
+//      largest=array[i];
+//   }
+// }
+// console.log(`The greatest Number is`,largest);
+
+const num1 = 120;
+const num2 = 60;
+const num3 = 30;
+let greatest;
+
+if(num1 >= num2 && num1 >= num3) {
+  greatest = num1;
+} else if (num2 >= num1 && num2 >= num3) {
+  greatest = num2;
+} else {
+  greatest = num3;
+}
+
+// console.log("The greatest number is " + greatest);
+//
+// console.log(30+20)
+// console.log(30-20)
+// console.log(30*20)
+// console.log(30/20)
+// console.log(30%20)
+
+
+/*
+* CONSOLE APPLICATION
+* ENTER YOUR PIN: 2
+* {pin: 2, name: "John doe", age: 24, school: "CMU", balance: 28000,history: [25000, 25500, 10000]},
+* */
+// const pin = 1; // user input
+// const loggedUser = employees.find(employee => employee.pin === pin)
+// console.log(loggedUser.name)
+// console.log(loggedUser.history.join(", "))
+const employees = [
+  {pin: 1, name: "John paul", age: 28, school: "ACLC", balance: 20000, history: [24000, 25500, 10000]},
+  {pin: 2, name: "John doe", age: 24, school: "CMU", balance: 28000,history: [25000, 25500, 10000]},
+  {pin: 3, name: "Jane doe", age: 31, school: "BUKSO", balance: 32000,history: [20000, 25500, 10000]},
+];
+
+const rd = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+})
+
+rd.question('Enter your pin number: ', (pin) =>  {
+  const data = employees.filter(customer => customer.pin === parseInt(pin))[0]
+  console.log(data.name); //filter customer
+  rd.close();
+});
