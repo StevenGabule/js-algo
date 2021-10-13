@@ -48,3 +48,4 @@ const totalArr = newArr1.concat(newArr2, newArr3)
 // check if the value is less than to 10
 const lessThanValue = totalArr.filter((val) => val < 10)
 console.log(lessThanValue)
+ga

@@ -23,11 +23,10 @@ function toCamelCase(str) {
         const arr1 = arr.map((val, i) => [val[0].toUpperCase(), ...val].join(''))
         return arr1.join('');
     }
-
     const arr = str.split(/[-_]+/);
     return arr.join('');
-
 }*/
+
 /*
 function toCamelCase(str){
     //console.log(str, 'testing')
@@ -45,7 +44,6 @@ function toCamelCase(str){
             let joinedWord = splitWords.join('')
             containmentArea.push(joinedWord)
             let newSentence = containmentArea.join('')
-
         }
         return containmentArea.join('')
     }
