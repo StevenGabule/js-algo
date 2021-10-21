@@ -21,9 +21,7 @@ function drawTable(rows) {
 
 function repeat(string, times) {
   let result = "";
-  for (let i = 0; i < times; i++) {
-    result += string;
-  }
+  for (let i = 0; i < times; i++) result += string;
   return result;
 }
 
@@ -31,10 +29,12 @@ function TextCell(text) {
   this.text = text.split("\n")
 }
 
+// return the minimum size the text width
 TextCell.prototype.minWidth = function () {
   return this.text.reduce((width, line) => Math.max(width, line.length), 0)
 }
 
+// return the minimum size the text height
 TextCell.prototype.minHeight = function () {
   return this.text.length;
 }
@@ -99,6 +99,7 @@ function RTextCell(text) {
 }
 
 RTextCell.prototype = Object.create(TextCell.prototype);
+
 RTextCell.prototype.draw = function (width, height) {
   let result = [];
   for (let i = 0; i < height; i++) {
@@ -109,10 +110,10 @@ RTextCell.prototype.draw = function (width, height) {
 }
 
 console.log(drawTable(dataTable(MOUNTAINS)));
-console.log(new RTextCell("A") instanceof RTextCell);
-console.log(new RTextCell("A") instanceof TextCell);
-console.log(new TextCell("A") instanceof RTextCell);
-console.log([1, 2, 3, 4] instanceof Array);
+// console.log(new RTextCell("A") instanceof RTextCell);
+// console.log(new RTextCell("A") instanceof TextCell);
+// console.log(new TextCell("A") instanceof RTextCell);
+// console.log([1, 2, 3, 4] instanceof Array);
 
 const pile = {
   elements: ["eggshell", "orange peel", "worm"],
