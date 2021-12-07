@@ -1,60 +1,58 @@
 function fastPower(number, power) {
-    return number ** power;
+  return number ** power;
 }
 
 function iterativePower(number, power) {
-    let result = 1;
-    for (let i = 0; i < power; i +=1) {
-        result *= number;
-    }
-    return result;
+  let result = 1;
+  for (let i = 0; i < power; i += 1) {
+    result *= number;
+  }
+  return result;
 }
 
 function factorial(number) {
-    if (number === 0) return 1;
-    return factorial(number - 1) * number;
+  if (number === 0) return 1;
+  return factorial(number - 1) * number;
 }
 
-/*
+/***
 * get all possible pairs out of provided letters
 * example:
 * letter = ['a', 'b']
 * output = ['aa', 'ab', 'ba', 'bb']
 * @param {string[]} letters
-* @return {string}
-* */
+* @return {*[]}
+***/
 function pairs(letters) {
-    const result = [];
-    for (let i = 0; i < letters.length; i+=1) {
-        for (let j = 0; j < letters.length; j +=1) {
-            result.push(`${letters[i]}${letters[j]}`);
-        }
+  const result = [];
+  for (let i = 0; i < letters.length; i += 1) {
+    for (let j = 0; j < letters.length; j += 1) {
+      result.push(`${letters[i]}${letters[j]}`);
     }
-    return result;
+  }
+  return result;
 }
 
-
 function multiplyArrayInPlace(array, multiplier) {
-    for (let i = 0; i < array.length; i+=1) {
-        array[i] *= multiplier;
-    }
-    return array;
+  for (let i = 0; i < array.length; i += 1) {
+    array[i] *= multiplier;
+  }
+  return array;
 }
 
 function multiplyArray(array, multiplier) {
-    const multipliedArray = [...array];
-    console.log(multipliedArray)
-    for (let i = 0; i < multipliedArray.length; i += 1) {
-        for (let j = 0; j < multipliedArray.length; j += 1) {
-            multipliedArray[j][i] *= multiplier
-        }
+  const multipliedArray = [...array];
+  for (let i = 0; i < multipliedArray.length; i += 1) {
+    for (let j = 0; j < multipliedArray.length; j += 1) {
+      multipliedArray[j][i] *= multiplier
     }
-    return multipliedArray;
+  }
+  return multipliedArray;
 }
 
 console.log(fastPower(3, 2))
 console.log(iterativePower(3, 2))
 console.log(factorial(5))
 console.log(pairs(['a', 'b']))
-console.log(multiplyArrayInPlace([1,2,3], 2))
-console.log(multiplyArray([[1,3,5],[2,4,6],[3,6,8]], 2))
+console.log(multiplyArrayInPlace([1, 2, 3], 2))
+console.log(multiplyArray([[1, 3, 5], [2, 4, 6], [3, 6, 8]], 2))
