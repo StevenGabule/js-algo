@@ -2,4 +2,4 @@
     return number ** power;
 }
 
-console.log(4**4)
+console.log(fastPower(4,4))

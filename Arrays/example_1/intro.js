@@ -1,5 +1,3 @@
-// Webstorm -paid ide VS VSCode
-
 // Create an Array
 // console.log(fruits.length) // 2
 
@@ -43,9 +41,11 @@ let newArr1 = [1, 2, 3, 4, 5]
 let newArr2 = [6, 7, 8, 9, 10]
 let newArr3 = [16, 17, 18, 19, 101]
 const totalArr = newArr1.concat(newArr2, newArr3)
+const mergeArr = [...newArr1, ...newArr2, ...newArr3];
+console.log("mergeArr::", mergeArr)
 // console.log(totalArr)
 
 // check if the value is less than to 10
-const lessThanValue = totalArr.filter((val) => val < 10)
-console.log(lessThanValue)
+// const lessThanValue = totalArr.filter((val) => val < 10)
+// console.log(lessThanValue)
 

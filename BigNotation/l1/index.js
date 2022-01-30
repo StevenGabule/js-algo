@@ -50,9 +50,9 @@ function multiplyArray(array, multiplier) {
   return multipliedArray;
 }
 
-console.log(fastPower(3, 2))
-console.log(iterativePower(3, 2))
-console.log(factorial(5))
-console.log(pairs(['a', 'b']))
-console.log(multiplyArrayInPlace([1, 2, 3], 2))
-console.log(multiplyArray([[1, 3, 5], [2, 4, 6], [3, 6, 8]], 2))
+console.log(fastPower(3, 2)) // 9
+console.log(iterativePower(3, 2)) // 9
+console.log(factorial(5)) // 120
+console.log(pairs(['a', 'b'])) // [ 'aa', 'ab', 'ba', 'bb' ]
+console.log(multiplyArrayInPlace([1, 2, 3], 2)) // [ 2, 4, 6 ]
+console.log(multiplyArray([[1, 3, 5], [2, 4, 6], [3, 6, 8]], 2)) // [ [ 2, 6, 10 ], [ 4, 8, 12 ], [ 6, 12, 16 ] ]

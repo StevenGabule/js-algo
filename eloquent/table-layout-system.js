@@ -9,6 +9,7 @@ function colWidths(rows) {
 function drawTable(rows) {
   const heights = rowHeights(rows);
   const widths = colWidths(rows);
+
   const drawLine = (blocks, lineNo) => blocks.map((block) => block[lineNo]).join(" ")
 
   function drawRow(row, rowNum) {

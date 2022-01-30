@@ -5,13 +5,18 @@ function forEach(arr, action) {
 }
 
 forEach(['water', 'fire', 'night'], console.log)
+/* :: Expected return ::
+  water
+  fire
+  night
+*/
 
 let sum = 0;
 forEach([1, 2, 3, 4, 5], (number) => sum += number)
 
 let arr = [6, 89, 3, 45];
 const maximus1 = Math.max(...arr);
-console.log(maximus1)
+console.log(maximus1)  // 89
 
 const rabbit = {};
 rabbit.speak = (line) => console.log("The rabbit say " + line)

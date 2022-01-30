@@ -1,9 +1,6 @@
 /*
 * Defining a class
 * */
-
-// webstorm
-// vscode
 /*class Rectangle {
   constructor(height, width, size) {
     this.height = height;
@@ -25,6 +22,7 @@ let Rectangle1 = class {
     this.width = width;
   }
 };
+
 console.log(Rectangle1.name); // output: "Rectangle"
 
 // named
